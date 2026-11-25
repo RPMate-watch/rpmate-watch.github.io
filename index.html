@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RPMate | Smart RPM Monitoring Watch</title>
+<meta name="description" content="RPMate: a wearable device that measures and monitors the rotational speed of an electric motor in RPM. Engineering project, Mechatronics Engineering, Delta University for Science and Technology." />
+<link rel="icon" type="image/png" href="logo.png" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="rpm-site">
+
+    <nav class="rpm-nav" aria-label="Site sections">
+        <span class="rpm-brand">
+            <img src="logo.png" alt="RPMate logo" class="rpm-brand-logo" />
+            <span class="rpm-brand-name">RPMate</span>
+        </span>
+        <span class="rpm-nav-links">
+            <a href="#about">About</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#hardware">Hardware</a>
+            <a href="#specs">Specifications</a>
+            <a href="#dashboard">Live Dashboard</a>
+            <a href="#applications">Applications</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#demo">Demo</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </span>
+    </nav>
+
+    <header class="rpm-hero">
+        <div class="rpm-hero-text">
+            <p class="rpm-eyebrow">Engineering Project</p>
+            <h1 class="rpm-title">RPMate</h1>
+            <p class="rpm-tagline">Smart RPM Monitoring Watch</p>
+            <p class="rpm-lead">
+                A wearable device that measures and monitors the rotational speed of an electric motor,
+                in revolutions per minute, and presents the readings where they are easiest to check.
+            </p>
+            <div class="rpm-hero-actions">
+                <a class="rpm-btn rpm-btn-primary" href="#about">Explore Project</a>
+                <a class="rpm-btn rpm-btn-ghost" href="#how-it-works">How It Works</a>
+            </div>
+        </div>
+        <img src="hero-watch.png" alt="Concept illustration of the RPMate smart watch showing a live RPM dial reading" class="rpm-hero-img" />
+    </header>
+    <p class="rpm-credit">Device render is a concept illustration of the project idea.</p>
+
+    <section id="about" class="rpm-section">
+        <p class="rpm-kicker">02 · About the Project</p>
+        <h2 class="rpm-h2">A speed gauge you wear</h2>
+        <div class="rpm-cols">
+            <div>
+                <p class="rpm-p">
+                    RPMate is a smart device designed to measure the rotational
+                    speed of an electric motor in RPM (revolutions per minute) and make that reading
+                    easy to monitor during operation.
+                </p>
+                <p class="rpm-p">
+                    Motors rarely fail without warning. Speed drift, vibration and irregular rotation
+                    show up in the RPM before they show up as damage. This project puts that signal on
+                    a wrist-worn device so it can be watched while work continues.
+                </p>
+                <h3 class="rpm-h3">Main objectives</h3>
+                <ul class="rpm-list">
+                    <li>Measure motor rotational speed in RPM.</li>
+                    <li>Present the reading clearly on a wearable device.</li>
+                    <li>Support continuous monitoring, not only spot checks.</li>
+                    <li>Keep the design practical for industrial environments.</li>
+                </ul>
+            </div>
+            <figure class="rpm-figure">
+                <img src="industrial-motor.png" alt="Concept illustration of an industrial electric motor at night" class="rpm-img" />
+                <figcaption class="rpm-credit">Illustrative image, not a photo of the project setup.</figcaption>
+            </figure>
+        </div>
+        <div class="rpm-duo">
+            <div class="rpm-card">
+                <h3 class="rpm-h3">The problem</h3>
+                <p class="rpm-p">
+                    Checking motor speed usually means handheld instruments, a stopped workflow, or no
+                    measurement at all. Small speed problems go unnoticed until they become expensive ones.
+                </p>
+            </div>
+            <div class="rpm-card">
+                <h3 class="rpm-h3">The proposed solution</h3>
+                <p class="rpm-p">
+                    A compact wearable meter that measures RPM and keeps the current reading, the recent
+                    trend and the extremes visible at a glance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="rpm-section">
+        <p class="rpm-kicker">03 · How It Works</p>
+        <h2 class="rpm-h2">From rotation to reading</h2>
+        <div class="rpm-steps">
+            <div class="rpm-step">
+                <span class="rpm-step-n">1</span>
+                <h3 class="rpm-step-name">Detect motor rotation</h3>
+                <p class="rpm-step-detail">The watch senses each rotation of the motor shaft as it happens.</p>
+            </div>
+            <div class="rpm-step">
+                <span class="rpm-step-n">2</span>
+                <h3 class="rpm-step-name">Receive sensor signals</h3>
+                <p class="rpm-step-detail">Every rotation produces a signal that reaches the device as an input pulse.</p>
+            </div>
+            <div class="rpm-step">
+                <span class="rpm-step-n">3</span>
+                <h3 class="rpm-step-name">Process the signals</h3>
+                <p class="rpm-step-detail">The controller counts the incoming pulses over a fixed time window.</p>
+            </div>
+            <div class="rpm-step">
+                <span class="rpm-step-n">4</span>
+                <h3 class="rpm-step-name">Calculate RPM</h3>
+                <p class="rpm-step-detail">The pulse count is converted into revolutions per minute.</p>
+            </div>
+            <div class="rpm-step">
+                <span class="rpm-step-n">5</span>
+                <h3 class="rpm-step-name">Display the measured speed</h3>
+                <p class="rpm-step-detail">The measured RPM is shown on the device and on the monitoring view.</p>
+            </div>
+        </div>
+        <figure class="rpm-figure">
+            <img src="sensor-board.png" alt="Concept illustration of a sensor module wired to a small controller board with a display" class="rpm-img" />
+            <figcaption class="rpm-credit">Illustrative image, not the actual project hardware.</figcaption>
+        </figure>
+    </section>
+
+    <section id="hardware" class="rpm-section">
+        <p class="rpm-kicker">04 · Hardware &amp; Components</p>
+        <h2 class="rpm-h2">What the device is built from</h2>
+        <p class="rpm-p">
+            The component concept comes from the team's early prototype layout and is now being adapted
+            from its original purpose to RPM measurement. Final components, circuit diagrams and code will
+            be provided by the project team.
+        </p>
+        <div class="rpm-rows">
+            <div class="rpm-row">
+                <span class="rpm-row-n">1</span>
+                <span class="rpm-row-name">Rotation sensor</span>
+                <span class="rpm-row-note">Planned: IR slot-type photoelectric speed encoder module (LM393) reading an encoder disc on the motor shaft.</span>
+            </div>
+            <div class="rpm-row">
+                <span class="rpm-row-n">2</span>
+                <span class="rpm-row-name">Microcontroller</span>
+                <span class="rpm-row-note">Planned: Arduino Nano-class board (ATmega328P), from the team's prototype layout. Not final.</span>
+            </div>
+            <div class="rpm-row">
+                <span class="rpm-row-n">3</span>
+                <span class="rpm-row-name">Display module</span>
+                <span class="rpm-row-note">Planned: 0.96&quot; OLED display, 128&times;64, I2C (SSD1306). Not final.</span>
+            </div>
+            <div class="rpm-row">
+                <span class="rpm-row-n">4</span>
+                <span class="rpm-row-name">Clock module</span>
+                <span class="rpm-row-note">Planned: DS3231 real-time clock for time and date alongside RPM.</span>
+            </div>
+            <div class="rpm-row">
+                <span class="rpm-row-n">5</span>
+                <span class="rpm-row-name">Power supply</span>
+                <span class="rpm-row-note">Planned: 3.7V LiPo battery with TP4056 USB-C charging and protection.</span>
+            </div>
+            <div class="rpm-row">
+                <span class="rpm-row-n">6</span>
+                <span class="rpm-row-name">Watch body and enclosure</span>
+                <span class="rpm-row-note">Hand-soldered prototype board first; a SolidWorks-designed, 3D-printed enclosure is planned for the final build.</span>
+            </div>
+        </div>
+        <figure class="rpm-figure rpm-figure-wide">
+            <img src="proteus-concept.png" alt="Early component layout from the team's Proteus simulation: an Arduino Nano wired to an OLED display, battery and I2C bus" class="rpm-img" />
+            <figcaption class="rpm-credit">Early component concept from the team's simulation, now being adapted to RPM measurement. Not the final circuit.</figcaption>
+        </figure>
+    </section>
+
+    <section id="specs" class="rpm-section">
+        <p class="rpm-kicker">05 · Technical Specifications</p>
+        <h2 class="rpm-h2">Measured and rated values</h2>
+        <table class="rpm-table">
+            <tbody>
+                <tr><th scope="row">Sensor type</th><td>Planned: IR slot-type photoelectric encoder (LM393)</td></tr>
+                <tr><th scope="row">Measurement range</th><td>To be confirmed by testing</td></tr>
+                <tr><th scope="row">Accuracy</th><td>To be confirmed by testing</td></tr>
+                <tr><th scope="row">Resolution</th><td>To be confirmed by testing</td></tr>
+                <tr><th scope="row">Update rate</th><td>To be confirmed by testing</td></tr>
+                <tr><th scope="row">Display</th><td>Planned: 0.96&quot; OLED, 128&times;64, I2C</td></tr>
+                <tr><th scope="row">Connectivity</th><td>To be confirmed</td></tr>
+                <tr><th scope="row">Operating voltage</th><td>Planned: 5V logic, 3.7V LiPo battery</td></tr>
+                <tr><th scope="row">Battery life</th><td>To be confirmed by testing</td></tr>
+                <tr><th scope="row">Dimensions</th><td>To be confirmed with the final enclosure</td></tr>
+                <tr><th scope="row">Weight</th><td>To be confirmed with the final enclosure</td></tr>
+            </tbody>
+        </table>
+        <p class="rpm-note">
+            Values marked &ldquo;Planned&rdquo; come from the team's selected components and are not final.
+            Values marked &ldquo;To be confirmed&rdquo; will be replaced with measured specifications
+            when the device is built and tested.
+        </p>
+    </section>
+
+    <section id="dashboard" class="rpm-section">
+        <p class="rpm-kicker">06 · Live RPM Monitoring</p>
+        <h2 class="rpm-h2">The monitoring dashboard</h2>
+        <div class="rpm-dash">
+            <div class="rpm-dash-stats">
+                <div class="rpm-stat rpm-stat-main">
+                    <span class="rpm-stat-label">Current RPM</span>
+                    <span class="rpm-stat-big" id="rpm-current">&ndash;</span>
+                    <span class="rpm-badge rpm-badge-live" id="rpm-badge">Simulating</span>
+                </div>
+                <div class="rpm-stat">
+                    <span class="rpm-stat-label">Maximum</span>
+                    <span class="rpm-stat-value" id="rpm-max">&ndash;</span>
+                </div>
+                <div class="rpm-stat">
+                    <span class="rpm-stat-label">Minimum</span>
+                    <span class="rpm-stat-value" id="rpm-min">&ndash;</span>
+                </div>
+            </div>
+            <div class="rpm-console">
+                <div class="rpm-chart-head">
+                    <span class="rpm-chart-title">RPM trend</span>
+                    <span class="rpm-chart-sub">Simulated readings, one per second</span>
+                </div>
+                <canvas id="rpm-chart" height="180" aria-label="Simulated RPM trend chart"></canvas>
+                <div class="rpm-readout" id="rpm-readout"></div>
+                <div class="rpm-slider-block">
+                    <label class="rpm-slider-label" for="rpm-load">Motor load <span id="rpm-load-value">50% load</span></label>
+                    <input type="range" id="rpm-load" min="0" max="100" value="50" />
+                </div>
+                <button type="button" class="rpm-btn rpm-btn-secondary" id="rpm-toggle">Pause simulation</button>
+                <details class="rpm-details">
+                    <summary>View chart data</summary>
+                    <table class="rpm-table rpm-data-table" id="rpm-data-table">
+                        <caption>Simulated readings, newest first</caption>
+                        <thead><tr><th scope="col">Reading</th><th scope="col">RPM</th></tr></thead>
+                        <tbody></tbody>
+                    </table>
+                </details>
+            </div>
+            <p class="rpm-note">
+                This dashboard runs a built-in simulation. It is not connected to real hardware. The layout and data
+                flow are designed so a live feed can replace the simulator once the device communication protocol is defined.
+            </p>
+        </div>
+    </section>
+
+    <section id="applications" class="rpm-section">
+        <p class="rpm-kicker">07 · Applications</p>
+        <h2 class="rpm-h2">Where it earns its place</h2>
+        <div class="rpm-apps">
+            <div class="rpm-card">
+                <h3 class="rpm-h3">Industrial motors</h3>
+                <p class="rpm-p">Continuous speed monitoring for motors on the plant floor.</p>
+            </div>
+            <div class="rpm-card">
+                <h3 class="rpm-h3">Manufacturing systems</h3>
+                <p class="rpm-p">Speed checks on rotating equipment inside production lines.</p>
+            </div>
+            <div class="rpm-card">
+                <h3 class="rpm-h3">Maintenance and troubleshooting</h3>
+                <p class="rpm-p">Spot abnormal speed behaviour before it becomes a failure.</p>
+            </div>
+            <div class="rpm-card">
+                <h3 class="rpm-h3">Motor performance monitoring</h3>
+                <p class="rpm-p">Track how a motor behaves over time under real load.</p>
+            </div>
+            <div class="rpm-card">
+                <h3 class="rpm-h3">Engineering laboratories</h3>
+                <p class="rpm-p">A practical measurement tool for experiments and coursework.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="rpm-section">
+        <p class="rpm-kicker">08 · Project Gallery</p>
+        <h2 class="rpm-h2">The build, documented</h2>
+        <div class="rpm-gallery">
+            <div class="rpm-slot">
+                <span class="rpm-slot-name">Project photos</span>
+                <span class="rpm-slot-note">Real photos of the finished device. Coming soon.</span>
+            </div>
+            <div class="rpm-slot">
+                <span class="rpm-slot-name">Circuit diagrams</span>
+                <span class="rpm-slot-note">Schematics of the measurement circuit. Coming soon.</span>
+            </div>
+            <div class="rpm-slot">
+                <span class="rpm-slot-name">PCB design</span>
+                <span class="rpm-slot-note">Board layout artwork. Coming soon.</span>
+            </div>
+            <div class="rpm-slot">
+                <span class="rpm-slot-name">Prototype images</span>
+                <span class="rpm-slot-note">Build and assembly stages. Coming soon.</span>
+            </div>
+            <div class="rpm-slot">
+                <span class="rpm-slot-name">Testing and implementation videos</span>
+                <span class="rpm-slot-note">The device measuring a running motor. Coming soon.</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="rpm-section">
+        <p class="rpm-kicker">09 · Demo Video</p>
+        <h2 class="rpm-h2">See how it works</h2>
+        <p class="rpm-p">
+            A short video explaining the project idea, how the device measures motor speed, and how it
+            operates. An explainer video comes first, and the final demonstration of the real device,
+            filmed during testing, takes its place here.
+        </p>
+        <video class="rpm-video-player" src="RPMate-Demo-Video.mp4" poster="video-poster.png" controls preload="metadata" playsinline></video>
+        <p class="rpm-p" style="margin-top:14px; font-size:13px; opacity:.7;">Explainer video. The final device demo, filmed during testing, will take its place here after the build phase.</p>
+    </section>
+
+    <section id="team" class="rpm-section">
+        <p class="rpm-kicker">10 · Team &amp; Credits</p>
+        <h2 class="rpm-h2">Team 6</h2>
+        <table class="rpm-table">
+            <thead>
+                <tr><th scope="col">Student</th><th scope="col">ID</th></tr>
+            </thead>
+            <tbody>
+                <tr><th scope="row">Yousef Mohamed Fawzy</th><td>1231172</td></tr>
+                <tr><th scope="row">Mahmoud Emad Elkordy</th><td>1231208</td></tr>
+                <tr><th scope="row">Mohamed Ehab Elnahas</th><td>1231289</td></tr>
+                <tr><th scope="row">Abdullah Yousef Ahmed</th><td>1231084</td></tr>
+                <tr><th scope="row">Abdelhameed Hany Abdelhameed</th><td>1231506</td></tr>
+                <tr><th scope="row">Mohamed Hassan Elsadany</th><td>1231210</td></tr>
+                <tr><th scope="row">Mohamed Kotp Ghaly</th><td>1231270</td></tr>
+                <tr><th scope="row">Abdelaziz Emad Elghandour</th><td>1231483</td></tr>
+                <tr><th scope="row">Ahmed El-Sayed Mohamed Ismail</th><td>1231479</td></tr>
+                <tr><th scope="row">Mahmoud Sayed</th><td>1231015</td></tr>
+            </tbody>
+        </table>
+        <div class="rpm-rows">
+            <div class="rpm-row"><span class="rpm-row-name">Course</span><span class="rpm-row-note">Microcontroller Applications</span></div>
+            <div class="rpm-row"><span class="rpm-row-name">Supervisor</span><span class="rpm-row-note">Dr. Mohamed El-Hosseiny</span></div>
+            <div class="rpm-row"><span class="rpm-row-name">University</span><span class="rpm-row-note">Delta University for Science and Technology</span></div>
+            <div class="rpm-row"><span class="rpm-row-name">Department</span><span class="rpm-row-note">Mechatronics Engineering</span></div>
+        </div>
+    </section>
+
+    <section id="contact" class="rpm-section">
+        <p class="rpm-kicker">11 · Contact &amp; Project Information</p>
+        <h2 class="rpm-h2">Follow the project</h2>
+        <div class="rpm-rows">
+            <div class="rpm-row"><span class="rpm-row-name">Documentation</span><span class="rpm-row-note">Link to be added.</span></div>
+            <div class="rpm-row"><span class="rpm-row-name">Source code</span><span class="rpm-row-note">Repository link to be added.</span></div>
+        </div>
+    </section>
+
+    <p class="rpm-closing">
+        Design draft, 26 Nov 2026. Specifications, gallery media and the demo video
+        are placeholders awaiting the project team's material.
+    </p>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>
